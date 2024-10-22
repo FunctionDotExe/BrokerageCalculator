@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout = findViewById(R.id.drawer_layout)
 
-        // Correctly retrieve the NavHostFragment using the updated ID
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as? NavHostFragment
             ?: throw IllegalStateException("NavHostFragment not found")
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val navigationView: NavigationView = findViewById(R.id.navigation_view)
 
         // Setup ActionBar and Navigation
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.firstFragment), drawerLayout)
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.FirstFragment), drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navigationView, navController)
 
