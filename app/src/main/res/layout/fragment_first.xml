@@ -1,24 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="16dp"
+    android:background="@color/white">
 
    <ImageView
+       android:id="@+id/GrowwId"
        android:layout_width="100dp"
        android:layout_height="100dp"
-       android:id="@+id/GrowwId"
        android:src="@drawable/unnamed"
+       android:layout_gravity="center" />
 
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Brokerage Calculator"
+       android:textSize="24sp"
+       android:textColor="@color/black"
+       android:layout_gravity="center"
+       android:layout_marginTop="16dp" />
 
+   <EditText
+       android:id="@+id/amountEditText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Enter Amount"
+       android:inputType="numberDecimal"
+       android:padding="16dp"
+       android:background="@drawable/edit_text_background"
+       android:layout_marginTop="16dp" />
 
+   <EditText
+       android:id="@+id/brokerageRateEditText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Enter Brokerage Rate (%)"
+       android:inputType="numberDecimal"
+       android:padding="16dp"
+       android:background="@drawable/edit_text_background"
+       android:layout_marginTop="8dp" />
 
-       />
+   <Button
+       android:id="@+id/calculateButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Calculate"
+       android:backgroundTint="@color/blue"
+       android:textColor="@color/white"
+       android:layout_marginTop="16dp"
+       android:padding="16dp" />
 
-
+   <TextView
+       android:id="@+id/resultTextView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:textSize="18sp"
+       android:textColor="@color/black" />
 
 </LinearLayout>

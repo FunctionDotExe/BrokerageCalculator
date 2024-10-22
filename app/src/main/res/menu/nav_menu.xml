@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_brokerage_calculator"
+        android:title="Brokerage Calculator" />
+    <item
+        android:id="@+id/item_other_calculator"
+        android:title="Other Calculator" />
+
+
+</menu>
