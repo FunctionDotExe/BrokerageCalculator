@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val navigationView: NavigationView = findViewById(R.id.navigation_view)
 
         // Setup ActionBar and Navigation
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.FirstFragment), drawerLayout)
+        val appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navigationView, navController)
 
