@@ -4,22 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.brokeragecalculator.databinding.FragmentFirstBinding
+import com.example.brokeragecalculator.databinding.FragmentBrokerageBinding
 
-class FirstFragment : Fragment() {
+class BrokerageCalcFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentBrokerageBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-       _binding= FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentBrokerageBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,14 +30,19 @@ class FirstFragment : Fragment() {
 
     private fun calculateBrokerage() {
         val amountString = binding.amountEditText.text.toString()
-        val rateString = binding.brokerageRateEditText.text.toString()
+        val buyPriceString = binding.buyPriceEditText.text.toString()
+        val sellPriceString = binding.sellPriceEditText.text.toString()
 
-        if (amountString.isNotEmpty() && rateString.isNotEmpty()) {
+        if (amountString.isNotEmpty() && buyPriceString.isNotEmpty() && sellPriceString.isNotEmpty()) {
             val amount = amountString.toDouble()
-            val rate = rateString.toDouble()
-            val brokerage = (amount * rate) / 100
+            val buyPrice = buyPriceString.toDouble()
+            val sellPrice = sellPriceString.toDouble()
+            val totalCost = amount * buyPrice
+            val totalRevenue = amount * sellPrice
+            val brokerage = (totalCost * 0.01) // Assuming 1% brokerage for example
 
             binding.resultTextView.text = "Brokerage: ₹${String.format("%.2f", brokerage)}"
+            binding.resultTextView.append("\nTotal Profit/Loss: ₹${String.format("%.2f", totalRevenue - totalCost - brokerage)}")
         } else {
             binding.resultTextView.text = "Please enter valid values."
         }

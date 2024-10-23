@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIP Calculator"
+        android:textSize="24sp"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/sip_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monthly SIP Amount"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/annual_return_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Expected Annual Return (%)"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/investment_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Investment Duration (years)"
+        android:inputType="number"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:background="@color/buttonColor"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/secondaryTextColor"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

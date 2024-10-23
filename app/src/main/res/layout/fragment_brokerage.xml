@@ -27,17 +27,27 @@
        android:id="@+id/amountEditText"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:hint="Enter Amount"
+       android:hint="Quantity NSE"
        android:inputType="numberDecimal"
        android:padding="16dp"
        android:background="@drawable/edit_text_background"
        android:layout_marginTop="16dp" />
 
    <EditText
-       android:id="@+id/brokerageRateEditText"
+       android:id="@+id/buyPriceEditText"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:hint="Enter Brokerage Rate (%)"
+       android:hint="Buy Price per Share"
+       android:inputType="numberDecimal"
+       android:padding="16dp"
+       android:background="@drawable/edit_text_background"
+       android:layout_marginTop="8dp" />
+
+   <EditText
+       android:id="@+id/sellPriceEditText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Sell Price per Share"
        android:inputType="numberDecimal"
        android:padding="16dp"
        android:background="@drawable/edit_text_background"
@@ -60,5 +70,4 @@
        android:layout_marginTop="16dp"
        android:textSize="18sp"
        android:textColor="@color/black" />
-
 </LinearLayout>

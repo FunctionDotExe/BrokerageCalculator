@@ -10,5 +10,10 @@
 
         <color name="blue">#007AFF</color> <!-- Adjust this to match the desired shade -->
 
-
+    <color name="strokeColor">#FF0000</color> <!-- Replace with desired color -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- Replace with desired color -->
+    <color name="primaryTextColor">#000000</color> <!-- Replace with desired color -->
+    <color name="textColor">#333333</color> <!-- Replace with desired color -->
+    <color name="buttonColor">#008CBA</color> <!-- Replace with desired color -->
+    <color name="secondaryTextColor">#555555</color> <!-- Replace with desired color -->
 </resources>

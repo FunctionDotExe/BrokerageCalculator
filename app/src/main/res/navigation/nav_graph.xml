@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.brokeragecalculator.FirstFragment"
+        android:name="com.example.brokeragecalculator.BrokerageCalcFragment"
         android:label="Brokerage Calculator" />
 
 
