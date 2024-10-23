@@ -12,10 +12,6 @@
     <fragment
         android:id="@+id/SIPCalcFragment"
         android:name="com.example.yourapp.SIPCalcFragment"
-        android:label="SIPCalcFragment" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.brokeragecalculator.MainActivity"
-        android:label="MainActivity" />
+        android:label="SIP Calculator" />
 
 </navigation>

@@ -7,6 +7,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         val navigationView: NavigationView = findViewById(R.id.navigation_view)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolBar)
+        setSupportActionBar(toolbar)
+        toolbar.setupWithNavController(navController)
 
         // Setup ActionBar and Navigation
         val appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
